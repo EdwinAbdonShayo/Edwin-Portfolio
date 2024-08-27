@@ -10,18 +10,14 @@
         <script src="Script/script.js"></script>
         <header>
             <img src="Logo/Logo-TP 0010.png">
-            <a href="#home">
-                <p>HOME</p>
-            </a>
-            <a href="#about">
-                <p>ABOUT</p>
-            </a>
-            <a href="#projects">
-                <p>PROJECTS</p>
-            </a>
-            <a href="#contacts">
-                <p>CONTACT</p>
-            </a>
+            <nav>
+                <a href="#home" class="link">HOME</a>
+                <a href="#about" class="link">ABOUT</a>
+                <a href="#skills" class="link">SKILLS</a>
+                <a href="#service" class="link">SERVICES</a>
+                <a href="#projects" class="link">PROJECTS</a>
+                <a href="#contacts" class="link">CONTACT</a>
+            </nav>
         </header>
         <main>
             <div class="intro" id="home">
@@ -43,7 +39,7 @@
                 </p>
                 <br>
             </div>
-            <div class="skills">
+            <div class="skills" id="skills">
                 <h2>Skills</h2>
                 <br>
                     <h3>Python</h3>
@@ -95,7 +91,7 @@
                         <div class="skill-bar-fill" style="width: 95%;"></div>
                     </div>
             </div>
-            <div class="serviceh">
+            <div class="serviceh" id="service">
                 <h2>Services Offered</h2>
                 <div class="services">
                     <div class="web">
@@ -146,8 +142,23 @@
                 <div class="medias">
                     <div class="medias-left">
                         <div class="media-container">
-                            <img src="Medias/102.jpg">
-                            <div class="loader"></div>
+                            <div class="withload">
+                                <video autoplay loop muted>
+                                    <source src="Medias/Eduwinot.mp4" type="video/mp4">
+                                </video>
+                                <div class="loader"></div>
+                            </div>
+                            <div class="overlay" style="right: 0;">
+                                <h3>The LEEM's Regulator</h3>
+                                <p>This device was designed to save electricity and protect devices from damage caused by being left plugged in for extended periods.
+                                    An Arduino Nano microcontroller was used to control a relay, turning it on and off based on a set timer.</p>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="withload">
+                                <img src="Medias/102.jpg">
+                                <div class="loader"></div>
+                            </div>
                             <div class="overlay" style="right: 0;">
                                 <h3>Mauritius Internet Governance Forum</h3>
                                 <p>During my time at Halley Movement, I collaborated with the team to organize the Mauritius Internet Governance Forum (Mauritius IGF) for 2023, part of the <a href="https://intgovforum.org" target="_blank">United Nations Initiatives</a>.
@@ -156,37 +167,15 @@
                                     Furthermore, I addressed the potential risks associated with AI and emphasized that with proper measures in place, we can look forward to a brighter future.</p>
                             </div>
                         </div>
-                        <div class="media-container">
-                            <video autoplay loop muted>
-                                <source src="Medias/Eduwinot.mp4" type="video/mp4">
-                            </video>
-                            <div class="loader"></div>
-                            <div class="overlay" style="right: 0;">
-                                <h3>The LEEM's Regulator</h3>
-                                <p>This device was designed to save electricity and protect devices from damage caused by being left plugged in for extended periods.
-                                    An Arduino Nano microcontroller was used to control a relay, turning it on and off based on a set timer.</p>
-                            </div>
-                        </div>
                     </div>
                     <div class="medias-right">
                         <div class="media-container">
-                            <video autoplay loop muted>
-                                <source src="Medias/IK-NT.mp4" type="video/mp4">
-                            </video>
-                            <div class="loader"></div>
-                            <div class="overlay">
-                                <h3>Graphics & Video Editing</h3>
-                                <p>This project involved creating a lyrics video for "<a href="https://www.youtube.com/watch?v=Ou6Y-QKHAeE" target="_blank">Njoo Tuparty</a>". 
-                                    I designed graphics with Adobe Illustrator and Photoshop, 
-                                    animated with After Effects and Premiere Pro, and assembled the video using Wondershare Filmora.
-                                </p>
+                            <div class="withload">
+                                <video autoplay loop muted>
+                                    <source src="Medias/F&B End.mp4" type="video/mp4">
+                                </video>
+                                <div class="loader"></div>
                             </div>
-                        </div>
-                        <div class="media-container">
-                            <video autoplay loop muted>
-                                <source src="Medias/F&B End.mp4" type="video/mp4">
-                            </video>
-                            <div class="loader"></div>
                             <div class="overlay">
                                 <h3>Front & Back End Solutions</h3>
                                 <p>This project included developing a web application with a front-end in HTML5 and CSS3.
@@ -194,13 +183,30 @@
                             </div>
                         </div>
                         <div class="media-container">
-                            <img src="Medias/SIG 24.jpg">
-                            <div class="loader"></div>
+                            <div class="withload">
+                                <img src="Medias/SIG 24.jpg">
+                                <div class="loader"></div>
+                            </div>
                             <div class="overlay">
                                 <h3>School of Internet Governance 2024</h3>
                                 <p>In early 2024, as part of the <a href="https://halleymovement.org" target="_blank">Halley Movement</a> team, I helped organize the month-long School of Internet Governance (SIG) event.
                                     It began with an opening session and continued with virtual sessions, where I served as the moderator.
                                     The Mauritius SIG aimed to educate participants on leveraging the internet effectively while being aware of its dangers.</p>
+                            </div>
+                        </div>
+                        <div class="media-container">
+                            <div class="withload">
+                                <video autoplay loop muted>
+                                    <source src="Medias/IK-NT.mp4" type="video/mp4">
+                                </video>
+                                <div class="loader"></div>
+                            </div>
+                            <div class="overlay">
+                                <h3>Graphics & Video Editing</h3>
+                                <p>This project involved creating a lyrics video for "<a href="https://www.youtube.com/watch?v=Ou6Y-QKHAeE" target="_blank">Njoo Tuparty</a>". 
+                                    I designed graphics with Adobe Illustrator and Photoshop, 
+                                    animated with After Effects and Premiere Pro, and assembled the video using Wondershare Filmora.
+                                </p>
                             </div>
                         </div>
                     </div>

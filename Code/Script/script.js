@@ -23,4 +23,23 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.body.classList.add('loaded');
+
+    // Function to add or remove the active class based on scroll position
+    function activateLinkOnScroll() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        let index = sections.length;
+
+        while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.classList.remove('active'));
+        navLinks[index].classList.add('active');
+    }
+
+    // Listen for scroll events
+    window.addEventListener('scroll', activateLinkOnScroll);
+
+    // Call the function initially to set the correct active link
+    activateLinkOnScroll();
 });
