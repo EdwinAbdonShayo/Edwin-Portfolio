@@ -15,7 +15,7 @@ body::before {
     position: absolute;
     width: 350px;
     height: 200px;
-    background-color: rgba(255, 166, 0, 0.8);
+    background-color: rgba(255, 166, 0, 0.4);
     border-radius: 10% 50%;
     top: 50%;
     left: 50%;
@@ -63,6 +63,10 @@ header a{
     text-decoration: none;
 }
 
+header a:visited {
+    background: #ffffff;
+}
+
 header img{
     max-width: 80%;
     padding-bottom: 40%;
@@ -96,6 +100,7 @@ main{
     margin: 1%;
     border-radius: 10px;
     border: solid 2px rgba(255, 255, 255, 0.3);
+    overflow-x: hidden;
     overflow-y: scroll;
     -ms-overflow-style: scroll;
     scrollbar-color: #ffbb00c2 #00000000;
@@ -166,9 +171,8 @@ main{
 .services {
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 50px;
     margin-top: 50px;
-
 }
 
 .services .web, .services .graphic {
@@ -191,7 +195,6 @@ main{
     margin: 10px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: xx-large;
 }
 
 .services th {
@@ -230,14 +233,6 @@ main{
     gap: 0.5%;
 }
 
-/* .medias-left{
-    grid-column: 1;
-}
-
-.medias-right{
-    grid-column: 2;
-} */
-
 .media-container{
     position: relative;
     overflow: hidden;
@@ -246,7 +241,6 @@ main{
     align-items: center;
     margin-bottom: 1%;
 }
-
 
 .loader {
     position: absolute;
@@ -356,6 +350,76 @@ body.loaded .loader {
     padding-left: 10%;
 }
 
+#logo {
+    width: 300px;
+    background: #ffffff77;
+    border-radius: 50%;
+}
+
+#username {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30%;
+}
+
+.social-links a {
+    gap: 80px;
+    transition: .75s ease-in-out;
+}
+
+.social-links img {
+    width: 50px;
+    transition: .5s ease-in-out;
+}
+
+.social-links img:hover {
+    transform: scale(1.3);
+}
+
+.social-links a:nth-child(n+3):hover {
+    rotate: -20deg;
+}
+
+.social-links a:nth-child(-n+2):hover {
+    rotate: 20deg;
+}
+
+.dot {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ffffff;
+    margin: 70px;
+}
+
+#copyright {
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: oblique;
+    font-size: medium;
+    font-weight: lighter;
+}
+
+#copyright a {
+    text-decoration: underline;
+}
 
 @media only screen and (max-width: 990px) {
     .medias {
