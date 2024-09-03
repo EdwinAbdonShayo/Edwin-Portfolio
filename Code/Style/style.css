@@ -60,34 +60,46 @@ nav {
     flex-direction: column;
     align-items: center;
     align-content: space-around;
-    /* justify-content: space-around; */
-    gap: 15px;
-}
-
-.link.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    padding: 5px 10px;
+    gap: 20px;
 }
 
 nav a{
     color: #ffffff;
     font-size: 150%;
     text-decoration: none;
-    /* margin: 15%; */
+    background-color: rgba(255, 255, 255, 0);
+    padding: 5px 10px;
+    transition: .6s;
+    border: 1px solid #ffffff00;
+    border-radius: 10px;
 }
 
 nav a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    border: 1px solid #ffffff;
+    border-radius: 10px;
     padding: 5px 10px;
 }
 
 nav a:active {
     background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 5px 10px;
 }
+
+.link.active {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #100020;
+    scale: 1.1;
+}
+
+/* header nav a.active {
+    color: #ff6347;
+    font-weight: bold;
+    text-decoration: underline; 
+} */
 
 header img{
     max-width: 80%;
@@ -115,6 +127,8 @@ p{
 }
 
 main{
+    display: flex;
+    flex-direction: column;
     flex: 6;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 2%;
@@ -131,11 +145,11 @@ main{
     -webkit-backdrop-filter: blur(10px);
 }
 
-.intro{
+.home{
     text-align: center;
 }
 
-.intro img{
+.home img{
     width: 95%;
     pointer-events: none;
 }
@@ -181,6 +195,18 @@ main{
     height: 10px;
     background-color: #cccccc;
     border-radius: 10px;
+}
+
+.skills .withimg {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+
+.skills img {
+    width: 20px;
 }
 
 .serviceh h2{
@@ -234,6 +260,7 @@ main{
     border-radius: 50px;
     cursor: pointer;
     font-size: large;
+    transition: .5s;
 }
 
 .services button:hover {
@@ -354,33 +381,21 @@ body.loaded .loader {
     margin: auto 10px;
 }
 
-.contact h2{
+.section#contacts h2{
     font-size: xxx-large;
     text-decoration: underline wavy 2px #5f5f5f;
     text-underline-offset: 25px;
 }
 
-.contact a{
+.section#contacts a{
     text-decoration: none;
     color: #ffffff;
 }
 
-.contact p{
+.section #contact{
     font-weight: bolder;
     font-size: x-large;
     padding-left: 10%;
-}
-
-#logo {
-    width: 300px;
-    background: #ffffff77;
-    border-radius: 50%;
-}
-
-#username {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0;
 }
 
 .social {
@@ -410,7 +425,7 @@ body.loaded .loader {
 }
 
 .social-links img:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 
 .social-links a:nth-child(n+3):hover {
@@ -430,16 +445,22 @@ body.loaded .loader {
     margin: 70px;
 }
 
-#copyright {
-    padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-style: oblique;
-    font-size: medium;
-    font-weight: lighter;
+#username {
+    font-size: 1.5em;
 }
 
-#copyright a {
+#logo {
+    width: 300px;
+    background: #ffffff77;
+    border-radius: 50%;
+}
+
+.social #copyright a {
     text-decoration: underline;
+}
+
+#copyright {
+    font-size: 1.5em;
 }
 
 @media only screen and (max-width: 990px) {
@@ -506,7 +527,7 @@ body.loaded .loader {
         font-size: 200%;
     }
 
-    .about h2, .skills h2, .serviceh h2, .project h2, .contact h2 {
+    .about h2, .skills h2, .serviceh h2, .project h2, .section#contacts h2 {
         font-size: xx-large;
     }
 
@@ -595,7 +616,7 @@ body.loaded .loader {
         gap: 10px;
     }
 
-    .serviceh h2, .project h2, .contact h2 {
+    .serviceh h2, .project h2, .section#contacts h2 {
         font-size: x-large;
     }
 
@@ -603,7 +624,7 @@ body.loaded .loader {
         font-size: 1.5em;
     }
 
-    .contact p{
+    .section#contacts p{
         font-size: 90%;
     }
 
