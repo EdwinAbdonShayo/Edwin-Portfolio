@@ -21,6 +21,7 @@ body::before {
     left: 50%;
     transform: translate(-50%, -50%);
     animation: moveShape 15s linear infinite;
+    filter: blur(20px);
 }
 
 @keyframes moveShape {
@@ -95,12 +96,6 @@ nav a:active {
     scale: 1.1;
 }
 
-/* header nav a.active {
-    color: #ff6347;
-    font-weight: bold;
-    text-decoration: underline; 
-} */
-
 header img{
     max-width: 80%;
     padding-bottom: 40%;
@@ -139,10 +134,14 @@ main{
     overflow-y: scroll;
     -ms-overflow-style: scrollbar;
     scrollbar-color: #ffbb00c2 #00000000;
-    scrollbar-width: auto;
+    scrollbar-width: thin;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+}
+
+#small {
+    display: none;
 }
 
 .home{
@@ -381,21 +380,21 @@ body.loaded .loader {
     margin: auto 10px;
 }
 
-.section#contacts h2{
+#contacts h2{
     font-size: xxx-large;
     text-decoration: underline wavy 2px #5f5f5f;
     text-underline-offset: 25px;
 }
 
-.section#contacts a{
+#contacts a{
     text-decoration: none;
     color: #ffffff;
 }
 
-.section #contact{
-    font-weight: bolder;
+#contact{
     font-size: x-large;
-    padding-left: 10%;
+    /* padding-left: 10%; */
+    text-align: center;
 }
 
 .social {
@@ -450,9 +449,7 @@ body.loaded .loader {
 }
 
 #logo {
-    width: 300px;
-    background: #ffffff77;
-    border-radius: 50%;
+    width: 150px;
 }
 
 .social #copyright a {
@@ -461,6 +458,7 @@ body.loaded .loader {
 
 #copyright {
     font-size: 1.5em;
+    text-align: center;
 }
 
 @media only screen and (max-width: 990px) {
@@ -485,12 +483,12 @@ body.loaded .loader {
     }
 
     body::before {
-        width: 135px;
-        height: 135px;
+        width: 150px;
+        height: 150px;
     }
 
     header {
-        margin: 2%; 
+        /* margin: 2%; 
         margin-bottom: 0;
         display: flex;
         flex-direction: row;
@@ -498,7 +496,8 @@ body.loaded .loader {
         justify-content: space-evenly;
         border: 0;
         border-top: solid 2px rgba(255, 255, 255, 0.3);
-        background: linear-gradient(rgba(255, 255, 255, 0.1), #10002000 90%);
+        background: linear-gradient(rgba(255, 255, 255, 0.1), #10002000 90%); */
+        display: none;
     }
 
     nav {
@@ -523,11 +522,20 @@ body.loaded .loader {
         overflow-x: hidden;
     }
 
+    #large {
+        display: none;
+    }
+
+    #small {
+        display: block;
+        font-size: 180%;
+    }
+
     .intro h1 {
         font-size: 200%;
     }
 
-    .about h2, .skills h2, .serviceh h2, .project h2, .section#contacts h2 {
+    .about h2, .skills h2, .serviceh h2, .project h2, .contacts h2 {
         font-size: xx-large;
     }
 
@@ -616,7 +624,7 @@ body.loaded .loader {
         gap: 10px;
     }
 
-    .serviceh h2, .project h2, .section#contacts h2 {
+    .serviceh h2, .project h2, .contacts h2 {
         font-size: x-large;
     }
 
@@ -624,8 +632,8 @@ body.loaded .loader {
         font-size: 1.5em;
     }
 
-    .section#contacts p{
-        font-size: 90%;
+    #contacts p{
+        font-size: 100%;
     }
 
     .social-links {

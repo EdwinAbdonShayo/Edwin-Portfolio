@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
     document.body.classList.add('loaded');
 
     const links = document.querySelectorAll('.link');
-    const sections = document.querySelectorAll('main section');
 
     links.forEach(link => {
         link.addEventListener('click', function (e) {
@@ -43,25 +42,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Observer callback function
-    const observerCallback = (entries) => {
-        entries.forEach(entry => {
-            const id = entry.target.id;
-            const link = document.querySelector(`header nav a[href="#${id}"]`);
-
-            if (entry.isIntersecting) {
-                links.forEach(link => link.classList.remove('active'));
-                link.classList.add('active');
-            }
-        });
-    };
-
-    // Create IntersectionObserver instance
-    const observer = new IntersectionObserver(observerCallback, {
-        root: null, // Use the viewport as the container
-        threshold: 0.5 // Trigger when 50% of the section is in view
-    });
-
-    // Observe each section
-    sections.forEach(section => observer.observe(section));
 });
